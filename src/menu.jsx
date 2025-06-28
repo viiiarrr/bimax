@@ -3,8 +3,8 @@ import MapComponent from "./MapComponent";
 
 function Menu() {
     return (
-        <div className="relative w-screen h-screen bg-gray-100">
-        <MapComponent />
+    <div className="relative w-screen h-screen bg-gray-100">
+    <MapComponent />
         <div className="relative w-screen h-screen bg-gray-100 overflow-hidden">
             {/* Top Bar */}
             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/80 px-6 py-3 rounded-lg shadow-md z-10">
@@ -18,34 +18,39 @@ function Menu() {
                 </div>
             </div>
 
-            {/* Left Panel */}
-            <div className="absolute bottom-5 left-5 z-10 bg-white/90 p-5 rounded-lg shadow-lg w-fit">
-                {/* Instruments */}
-                <div className="flex justify-center gap-10 mb-4">
-                    <div className="w-20 h-20 bg-gray-300 rounded-full shadow-inner flex items-center justify-center text-xs">Attitude</div>
-                    <div className="w-20 h-20 bg-gray-300 rounded-full shadow-inner flex items-center justify-center text-xs">Heading</div>
+            <div className="absolute bottom-4 left-4 z-10 bg-white/90 p-6 rounded-2xl shadow-lg w-max">
+            {/* Instruments */}
+            <div className="flex justify-center gap-10 mb-6">
+                <div className="w-28 h-28 bg-gray-300 rounded-full shadow-inner flex items-center justify-center text-base font-semibold">
+                Attitude
                 </div>
+                <div className="w-28 h-28 bg-gray-300 rounded-full shadow-inner flex items-center justify-center text-base font-semibold">
+                Heading
+                </div>
+            </div>
 
-                {/* Info Panel */}
-                <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-xs font-medium text-gray-800">
-                    <div className="flex flex-col gap-2">
-                        <div className="bg-white px-4 py-1 rounded shadow text-center">NULL - 0</div>
-                        <div className="bg-white px-4 py-1 rounded shadow text-center">📡 No GPS</div>
-                        <div className="bg-white px-4 py-1 rounded shadow text-center">🛠️ 0</div>
-                        <div className="bg-red-200 px-4 py-1 rounded shadow text-center">📶 0%</div>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <div className="bg-white px-4 py-1 rounded shadow text-center">📏 0 m</div>
-                        <div className="bg-white px-4 py-1 rounded shadow text-center">⏱ 0.00 m/s</div>
-                        <div className="bg-white px-4 py-1 rounded shadow text-center">🌬️ 0.00 m/s</div>
-                        <div className="bg-white px-4 py-1 rounded shadow text-center">🔋 0%</div>
-                    </div>
+            {/* Info Panel */}
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm font-semibold text-gray-800">
+                <div className="flex flex-col gap-3">
+                <div className="bg-white px-5 py-2 rounded shadow text-center">NULL - 0</div>
+                <div className="bg-white px-5 py-2 rounded shadow text-center">📡 No GPS</div>
+                <div className="bg-white px-5 py-2 rounded shadow text-center">🛠️ 0</div>
+                <div className="bg-red-200 px-5 py-2 rounded shadow text-center">📶 0%</div>
                 </div>
+                <div className="flex flex-col gap-3">
+                <div className="bg-white px-5 py-2 rounded shadow text-center">📏 0 m</div>
+                <div className="bg-white px-5 py-2 rounded shadow text-center">⏱ 0.00 m/s</div>
+                <div className="bg-white px-5 py-2 rounded shadow text-center">🌬️ 0.00 m/s</div>
+                <div className="bg-white px-5 py-2 rounded shadow text-center">🔋 0%</div>
+                </div>
+            </div>
 
-                {/* Full Data Button */}
-                <div className="text-center mt-4">
-                    <button className="bg-gray-200 hover:bg-gray-300 px-4 py-1 rounded shadow text-sm text-black">Full Data</button>
-                </div>
+            {/* Button */}
+            <div className="text-center mt-6">
+                <button className="bg-gray-200 hover:bg-gray-300 px-6 py-2 rounded-lg shadow text-base font-medium">
+                Full Data
+                </button>
+            </div>
             </div>
 
             {/* Right Buttons */}
@@ -67,7 +72,7 @@ function Menu() {
                 <button className="bg-white px-3 py-1 rounded shadow text-sm text-black">3D</button>
             </div>
         </div>
-        </div>
+    </div>
     );
 }
 
